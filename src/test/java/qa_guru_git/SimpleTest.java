@@ -20,7 +20,7 @@ public class SimpleTest {
     void FindCodeJUnit5OnPageSoftAssertionTest() {
         open("https://github.com/");
 
-        //ищем в поел поиска по имени Selenide
+        //ищем в поле поиска по имени Selenide
         $("[name=q]").setValue("Selenide").pressEnter();
         // слева ищем и переходим в Wikis
         $("#js-pjax-container").$(byText("Wikis")).click();
