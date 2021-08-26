@@ -1,6 +1,8 @@
 package qa_guru_git;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +16,12 @@ public class SimpleTest {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
+    }
+
+    @AfterAll
+    static void clearBrowserData() {
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
     }
 
     @Test
